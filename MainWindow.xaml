@@ -1,0 +1,95 @@
+﻿<Window x:Class="ConnectFour.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:ConnectFour"
+        Title="Conect Four" Height="457.001" Width="467.333" Foreground="White" Background="{x:Null}">
+    <Window.DataContext>
+        <local:MainWindowViewModel/>
+    </Window.DataContext>
+
+    <Grid>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="#FF555555"/>
+                <GradientStop Color="White"/>
+                <GradientStop Color="#FF5E5E5E"/>
+                <GradientStop Color="#FF0E0E0E" Offset="1"/>
+                <GradientStop Color="#FF161616" Offset="1"/>
+                <GradientStop Color="#FF171717" Offset="1"/>
+                <GradientStop Color="#FF1A1A1A" Offset="0.999"/>
+                <GradientStop Color="#FF2A2A2A" Offset="0.996"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="600"/>
+        </Grid.ColumnDefinitions>
+        <Button x:Name="_00" HorizontalAlignment="Left" Margin="10,361,0,0" VerticalAlignment="Top" Width="50" Height="50"   BorderThickness="2" BorderBrush="{Binding ListBorderColor[0]}"  Background="{Binding ListColor[0]}"  Command="{Binding CommandMoveButton}" CommandParameter="0,0"/>
+        <Button x:Name="_01" HorizontalAlignment="Left" Margin="10,306,0,0" VerticalAlignment="Top" Width="50" Height="50"   BorderThickness="2" BorderBrush="{Binding ListBorderColor[1]}"  Background="{Binding ListColor[1]}"  Command="{Binding CommandMoveButton}" CommandParameter="0,1"/>
+        <Button x:Name="_02" HorizontalAlignment="Left" Margin="10,251,0,0" VerticalAlignment="Top" Width="50" Height="50"   BorderThickness="2" BorderBrush="{Binding ListBorderColor[2]}"  Background="{Binding ListColor[2]}"  Command="{Binding CommandMoveButton}" CommandParameter="0,2"/>
+        <Button x:Name="_03" HorizontalAlignment="Left" Margin="10,196,0,0" VerticalAlignment="Top" Width="50" Height="50"   BorderThickness="2" BorderBrush="{Binding ListBorderColor[3]}"  Background="{Binding ListColor[3]}"  Command="{Binding CommandMoveButton}" CommandParameter="0,3"/>
+        <Button x:Name="_04" HorizontalAlignment="Left" Margin="10,141,0,0" VerticalAlignment="Top" Width="50" Height="50"   BorderThickness="2" BorderBrush="{Binding ListBorderColor[4]}"  Background="{Binding ListColor[4]}"  Command="{Binding CommandMoveButton}" CommandParameter="0,4"/>
+        <Button x:Name="_05" HorizontalAlignment="Left" Margin="10,86,0,0" VerticalAlignment="Top" Width="50" Height="50"    BorderThickness="2" BorderBrush="{Binding ListBorderColor[5]}"  Background="{Binding ListColor[5]}"  Command="{Binding CommandMoveButton}" CommandParameter="0,5"/>
+        <Button x:Name="_06" HorizontalAlignment="Left" Margin="10,31,0,0" VerticalAlignment="Top" Width="50" Height="50"    BorderThickness="2" BorderBrush="{Binding ListBorderColor[6]}"  Background="{Binding ListColor[6]}"  Command="{Binding CommandMoveButton}" CommandParameter="0,6"/>
+        <Button x:Name="_10" HorizontalAlignment="Left" Margin="65,361,0,0" VerticalAlignment="Top" Width="50" Height="50"   BorderThickness="2" BorderBrush="{Binding ListBorderColor[7]}"  Background="{Binding ListColor[7]}"  Command="{Binding CommandMoveButton}" CommandParameter="1,0"/>
+        <Button x:Name="_11" HorizontalAlignment="Left" Margin="65,306,0,0" VerticalAlignment="Top" Width="50" Height="50"   BorderThickness="2" BorderBrush="{Binding ListBorderColor[8]}"  Background="{Binding ListColor[8]}"  Command="{Binding CommandMoveButton}" CommandParameter="1,1"/>
+        <Button x:Name="_12" HorizontalAlignment="Left" Margin="65,251,0,0" VerticalAlignment="Top" Width="50" Height="50"   BorderThickness="2" BorderBrush="{Binding ListBorderColor[9]}"  Background="{Binding ListColor[9]}"  Command="{Binding CommandMoveButton}" CommandParameter="1,2"/>
+        <Button x:Name="_13" HorizontalAlignment="Left" Margin="65,196,0,0" VerticalAlignment="Top" Width="50" Height="50"   BorderThickness="2" BorderBrush="{Binding ListBorderColor[10]}" Background="{Binding ListColor[10]}" Command="{Binding CommandMoveButton}" CommandParameter="1,3"/>
+        <Button x:Name="_14" HorizontalAlignment="Left" Margin="65,141,0,0" VerticalAlignment="Top" Width="50" Height="50"   BorderThickness="2" BorderBrush="{Binding ListBorderColor[11]}" Background="{Binding ListColor[11]}" Command="{Binding CommandMoveButton}" CommandParameter="1,4"/>
+        <Button x:Name="_15" HorizontalAlignment="Left" Margin="65,86,0,0" VerticalAlignment="Top" Width="50" Height="50"    BorderThickness="2" BorderBrush="{Binding ListBorderColor[12]}" Background="{Binding ListColor[12]}" Command="{Binding CommandMoveButton}" CommandParameter="1,5"/>
+        <Button x:Name="_16" HorizontalAlignment="Left" Margin="65,31,0,0" VerticalAlignment="Top" Width="50" Height="50"    BorderThickness="2" BorderBrush="{Binding ListBorderColor[13]}" Background="{Binding ListColor[13]}" Command="{Binding CommandMoveButton}" CommandParameter="1,6"/>
+        <Button x:Name="_20" HorizontalAlignment="Left" Margin="120,361,0,0" VerticalAlignment="Top" Width="50" Height="50"  BorderThickness="2" BorderBrush="{Binding ListBorderColor[14]}" Background="{Binding ListColor[14]}" Command="{Binding CommandMoveButton}" CommandParameter="2,0"/>
+        <Button x:Name="_21" HorizontalAlignment="Left" Margin="120,306,0,0" VerticalAlignment="Top" Width="50" Height="50"  BorderThickness="2" BorderBrush="{Binding ListBorderColor[15]}" Background="{Binding ListColor[15]}" Command="{Binding CommandMoveButton}" CommandParameter="2,1"/>
+        <Button x:Name="_22" HorizontalAlignment="Left" Margin="120,251,0,0" VerticalAlignment="Top" Width="50" Height="50"  BorderThickness="2" BorderBrush="{Binding ListBorderColor[16]}" Background="{Binding ListColor[16]}" Command="{Binding CommandMoveButton}" CommandParameter="2,2"/>
+        <Button x:Name="_23" HorizontalAlignment="Left" Margin="120,196,0,0" VerticalAlignment="Top" Width="50" Height="50"  BorderThickness="2" BorderBrush="{Binding ListBorderColor[17]}" Background="{Binding ListColor[17]}" Command="{Binding CommandMoveButton}" CommandParameter="2,3"/>
+        <Button x:Name="_24" HorizontalAlignment="Left" Margin="120,141,0,0" VerticalAlignment="Top" Width="50" Height="50"  BorderThickness="2" BorderBrush="{Binding ListBorderColor[18]}" Background="{Binding ListColor[18]}" Command="{Binding CommandMoveButton}" CommandParameter="2,4"/>
+        <Button x:Name="_25" HorizontalAlignment="Left" Margin="120,86,0,0" VerticalAlignment="Top" Width="50" Height="50"   BorderThickness="2" BorderBrush="{Binding ListBorderColor[19]}" Background="{Binding ListColor[19]}" Command="{Binding CommandMoveButton}" CommandParameter="2,5"/>
+        <Button x:Name="_26" HorizontalAlignment="Left" Margin="120,31,0,0" VerticalAlignment="Top" Width="50" Height="50"   BorderThickness="2" BorderBrush="{Binding ListBorderColor[20]}" Background="{Binding ListColor[20]}" Command="{Binding CommandMoveButton}" CommandParameter="2,6"/>
+        <Button x:Name="_30" HorizontalAlignment="Left" Margin="175,361,0,0" VerticalAlignment="Top" Width="50" Height="50"  BorderThickness="2" BorderBrush="{Binding ListBorderColor[21]}" Background="{Binding ListColor[21]}" Command="{Binding CommandMoveButton}" CommandParameter="3,0"/>
+        <Button x:Name="_31" HorizontalAlignment="Left" Margin="175,306,0,0" VerticalAlignment="Top" Width="50" Height="50"  BorderThickness="2" BorderBrush="{Binding ListBorderColor[22]}" Background="{Binding ListColor[22]}" Command="{Binding CommandMoveButton}" CommandParameter="3,1"/>
+        <Button x:Name="_32" HorizontalAlignment="Left" Margin="175,251,0,0" VerticalAlignment="Top" Width="50" Height="50"  BorderThickness="2" BorderBrush="{Binding ListBorderColor[23]}" Background="{Binding ListColor[23]}" Command="{Binding CommandMoveButton}" CommandParameter="3,2"/>
+        <Button x:Name="_33" HorizontalAlignment="Left" Margin="175,196,0,0" VerticalAlignment="Top" Width="50" Height="50"  BorderThickness="2" BorderBrush="{Binding ListBorderColor[24]}" Background="{Binding ListColor[24]}" Command="{Binding CommandMoveButton}" CommandParameter="3,3"/>
+        <Button x:Name="_34" HorizontalAlignment="Left" Margin="175,141,0,0" VerticalAlignment="Top" Width="50" Height="50"  BorderThickness="2" BorderBrush="{Binding ListBorderColor[25]}" Background="{Binding ListColor[25]}" Command="{Binding CommandMoveButton}" CommandParameter="3,4"/>
+        <Button x:Name="_35" HorizontalAlignment="Left" Margin="175,86,0,0" VerticalAlignment="Top" Width="50" Height="50"   BorderThickness="2" BorderBrush="{Binding ListBorderColor[26]}" Background="{Binding ListColor[26]}" Command="{Binding CommandMoveButton}" CommandParameter="3,5"/>
+        <Button x:Name="_36" HorizontalAlignment="Left" Margin="175,31,0,0" VerticalAlignment="Top" Width="50" Height="50"   BorderThickness="2" BorderBrush="{Binding ListBorderColor[27]}" Background="{Binding ListColor[27]}" Command="{Binding CommandMoveButton}" CommandParameter="3,6"/>
+        <Button x:Name="_40" HorizontalAlignment="Left" Margin="230,361,0,0" VerticalAlignment="Top" Width="50" Height="50"  BorderThickness="2" BorderBrush="{Binding ListBorderColor[28]}" Background="{Binding ListColor[28]}" Command="{Binding CommandMoveButton}" CommandParameter="4,0"/>
+        <Button x:Name="_41" HorizontalAlignment="Left" Margin="230,306,0,0" VerticalAlignment="Top" Width="50" Height="50"  BorderThickness="2" BorderBrush="{Binding ListBorderColor[29]}" Background="{Binding ListColor[29]}" Command="{Binding CommandMoveButton}" CommandParameter="4,1"/>
+        <Button x:Name="_42" HorizontalAlignment="Left" Margin="230,251,0,0" VerticalAlignment="Top" Width="50" Height="50"  BorderThickness="2" BorderBrush="{Binding ListBorderColor[30]}" Background="{Binding ListColor[30]}" Command="{Binding CommandMoveButton}" CommandParameter="4,2"/>
+        <Button x:Name="_43" HorizontalAlignment="Left" Margin="230,196,0,0" VerticalAlignment="Top" Width="50" Height="50"  BorderThickness="2" BorderBrush="{Binding ListBorderColor[31]}" Background="{Binding ListColor[31]}" Command="{Binding CommandMoveButton}" CommandParameter="4,3"/>
+        <Button x:Name="_44" HorizontalAlignment="Left" Margin="230,141,0,0" VerticalAlignment="Top" Width="50" Height="50"  BorderThickness="2" BorderBrush="{Binding ListBorderColor[32]}" Background="{Binding ListColor[32]}" Command="{Binding CommandMoveButton}" CommandParameter="4,4"/>
+        <Button x:Name="_45" HorizontalAlignment="Left" Margin="230,86,0,0" VerticalAlignment="Top" Width="50" Height="50"   BorderThickness="2" BorderBrush="{Binding ListBorderColor[33]}" Background="{Binding ListColor[33]}" Command="{Binding CommandMoveButton}" CommandParameter="4,5"/>
+        <Button x:Name="_46" HorizontalAlignment="Left" Margin="230,31,0,0" VerticalAlignment="Top" Width="50" Height="50"   BorderThickness="2" BorderBrush="{Binding ListBorderColor[34]}" Background="{Binding ListColor[34]}" Command="{Binding CommandMoveButton}" CommandParameter="4,6"/>
+        <Button x:Name="_50" HorizontalAlignment="Left" Margin="285,361,0,0" VerticalAlignment="Top" Width="50" Height="50"  BorderThickness="2" BorderBrush="{Binding ListBorderColor[35]}" Background="{Binding ListColor[35]}" Command="{Binding CommandMoveButton}" CommandParameter="5,0"/>
+        <Button x:Name="_51" HorizontalAlignment="Left" Margin="285,306,0,0" VerticalAlignment="Top" Width="50" Height="50"  BorderThickness="2" BorderBrush="{Binding ListBorderColor[36]}" Background="{Binding ListColor[36]}" Command="{Binding CommandMoveButton}" CommandParameter="5,1"/>
+        <Button x:Name="_52" HorizontalAlignment="Left" Margin="285,251,0,0" VerticalAlignment="Top" Width="50" Height="50"  BorderThickness="2" BorderBrush="{Binding ListBorderColor[37]}" Background="{Binding ListColor[37]}" Command="{Binding CommandMoveButton}" CommandParameter="5,2"/>
+        <Button x:Name="_53" HorizontalAlignment="Left" Margin="285,196,0,0" VerticalAlignment="Top" Width="50" Height="50"  BorderThickness="2" BorderBrush="{Binding ListBorderColor[38]}" Background="{Binding ListColor[38]}" Command="{Binding CommandMoveButton}" CommandParameter="5,3"/>
+        <Button x:Name="_54" HorizontalAlignment="Left" Margin="285,141,0,0" VerticalAlignment="Top" Width="50" Height="50"  BorderThickness="2" BorderBrush="{Binding ListBorderColor[39]}" Background="{Binding ListColor[39]}" Command="{Binding CommandMoveButton}" CommandParameter="5,4"/>
+        <Button x:Name="_55" HorizontalAlignment="Left" Margin="285,86,0,0" VerticalAlignment="Top" Width="50" Height="50"   BorderThickness="2" BorderBrush="{Binding ListBorderColor[40]}" Background="{Binding ListColor[40]}" Command="{Binding CommandMoveButton}" CommandParameter="5,5"/>
+        <Button x:Name="_56" HorizontalAlignment="Left" Margin="285,31,0,0" VerticalAlignment="Top" Width="50" Height="50"   BorderThickness="2" BorderBrush="{Binding ListBorderColor[41]}" Background="{Binding ListColor[41]}" Command="{Binding CommandMoveButton}" CommandParameter="5,6"/>
+        <Button x:Name="_60" HorizontalAlignment="Left" Margin="340,361,0,0" VerticalAlignment="Top" Width="50" Height="50"  BorderThickness="2" BorderBrush="{Binding ListBorderColor[42]}" Background="{Binding ListColor[42]}" Command="{Binding CommandMoveButton}" CommandParameter="6,0"/>
+        <Button x:Name="_61" HorizontalAlignment="Left" Margin="340,306,0,0" VerticalAlignment="Top" Width="50" Height="50"  BorderThickness="2" BorderBrush="{Binding ListBorderColor[43]}" Background="{Binding ListColor[43]}" Command="{Binding CommandMoveButton}" CommandParameter="6,1"/>
+        <Button x:Name="_62" HorizontalAlignment="Left" Margin="340,251,0,0" VerticalAlignment="Top" Width="50" Height="50"  BorderThickness="2" BorderBrush="{Binding ListBorderColor[44]}" Background="{Binding ListColor[44]}" Command="{Binding CommandMoveButton}" CommandParameter="6,2"/>
+        <Button x:Name="_63" HorizontalAlignment="Left" Margin="340,196,0,0" VerticalAlignment="Top" Width="50" Height="50"  BorderThickness="2" BorderBrush="{Binding ListBorderColor[45]}" Background="{Binding ListColor[45]}" Command="{Binding CommandMoveButton}" CommandParameter="6,3"/>
+        <Button x:Name="_64" HorizontalAlignment="Left" Margin="340,141,0,0" VerticalAlignment="Top" Width="50" Height="50"  BorderThickness="2" BorderBrush="{Binding ListBorderColor[46]}" Background="{Binding ListColor[46]}" Command="{Binding CommandMoveButton}" CommandParameter="6,4"/>
+        <Button x:Name="_65" HorizontalAlignment="Left" Margin="340,86,0,0" VerticalAlignment="Top" Width="50" Height="50"   BorderThickness="2" BorderBrush="{Binding ListBorderColor[47]}" Background="{Binding ListColor[47]}" Command="{Binding CommandMoveButton}" CommandParameter="6,5"/>
+        <Button x:Name="_66" HorizontalAlignment="Left" Margin="340,31,0,0" VerticalAlignment="Top" Width="50" Height="50"   BorderThickness="2" BorderBrush="{Binding ListBorderColor[48]}" Background="{Binding ListColor[48]}" Command="{Binding CommandMoveButton}" CommandParameter="6,6"/>
+        <Button x:Name="_70" HorizontalAlignment="Left" Margin="395,361,0,0" VerticalAlignment="Top" Width="50" Height="50"  BorderThickness="2" BorderBrush="{Binding ListBorderColor[49]}" Background="{Binding ListColor[49]}" Command="{Binding CommandMoveButton}" CommandParameter="7,0"/>
+        <Button x:Name="_71" HorizontalAlignment="Left" Margin="395,306,0,0" VerticalAlignment="Top" Width="50" Height="50"  BorderThickness="2" BorderBrush="{Binding ListBorderColor[50]}" Background="{Binding ListColor[50]}" Command="{Binding CommandMoveButton}" CommandParameter="7,1"/>
+        <Button x:Name="_72" HorizontalAlignment="Left" Margin="395,251,0,0" VerticalAlignment="Top" Width="50" Height="50"  BorderThickness="2" BorderBrush="{Binding ListBorderColor[51]}" Background="{Binding ListColor[51]}" Command="{Binding CommandMoveButton}" CommandParameter="7,2"/>
+        <Button x:Name="_73" HorizontalAlignment="Left" Margin="395,196,0,0" VerticalAlignment="Top" Width="50" Height="50"  BorderThickness="2" BorderBrush="{Binding ListBorderColor[52]}" Background="{Binding ListColor[52]}" Command="{Binding CommandMoveButton}" CommandParameter="7,3"/>
+        <Button x:Name="_74" HorizontalAlignment="Left" Margin="395,141,0,0" VerticalAlignment="Top" Width="50" Height="50"  BorderThickness="2" BorderBrush="{Binding ListBorderColor[53]}" Background="{Binding ListColor[53]}" Command="{Binding CommandMoveButton}" CommandParameter="7,4"/>
+        <Button x:Name="_75" HorizontalAlignment="Left" Margin="395,86,0,0" VerticalAlignment="Top" Width="50" Height="50"   BorderThickness="2" BorderBrush="{Binding ListBorderColor[54]}" Background="{Binding ListColor[54]}" Command="{Binding CommandMoveButton}" CommandParameter="7,5"/>
+        <Button x:Name="_76" HorizontalAlignment="Left" Margin="395,31,0,0" VerticalAlignment="Top" Width="50" Height="50"   BorderThickness="2" BorderBrush="{Binding ListBorderColor[55]}" Background="{Binding ListColor[55]}" Command="{Binding CommandMoveButton}" CommandParameter="7,6"/>
+        <Menu x:Name="MainMenu" HorizontalAlignment="Left" Height="20" Margin="0,0,0,0" VerticalAlignment="Top" Width="455" Background="{x:Null}">
+            <MenuItem Header="Menu" FontWeight="Bold">
+                <MenuItem x:Name="Menu_NewGame" Header="New Game" HorizontalAlignment="Left" Width="150" Command="{Binding CommandNewGame}" Background="{x:Null}"/>
+                <MenuItem x:Name="Menu_Exit" Header="Exit" HorizontalAlignment="Left" Width="150" Command="{Binding CommandExit}" Background="{x:Null}"/>
+            </MenuItem>
+            <MenuItem Header="Ai Level" FontWeight="Bold">
+                <MenuItem x:Name="AiLevel_Easy" Header="Easy" HorizontalAlignment="Left" Width="150" Command="{Binding CommandAiLevelChange}" CommandParameter="1" Background="{x:Null}"/>
+                <MenuItem x:Name="AiLevel_Medium" Header="Medium" HorizontalAlignment="Left" Width="150" Command="{Binding CommandAiLevelChange}" CommandParameter="2" Background="{x:Null}"/>
+                <MenuItem x:Name="AiLevel_Hard" Header="Hard" HorizontalAlignment="Left" Width="150" Command="{Binding CommandAiLevelChange}" CommandParameter="3" Background="{x:Null}"/>
+            </MenuItem>
+        </Menu>
+
+    </Grid>
+</Window>
